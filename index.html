@@ -1,78 +1,818 @@
-<!DOCTYPE html>
+
+</html><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Kensfot Techub & Software</title>
+    <title>Kensoft Techub - Cyber Cafe & Printing Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #f0f0f0;
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
         }
-        header, footer {
-            background-color: #1f1f1f;
-            padding: 20px;
-            text-align: center;
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        nav a {
-            margin: 0 15px;
-            color: #bbb;
-            text-decoration: none;
-            font-weight: bold;
+        .price-card:hover {
+            transform: scale(1.03);
         }
-        nav a.active, nav a:hover {
-            color: #00bcd4;
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
         }
-        .container {
-            padding: 40px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        h1, h2 {
-            color: #00bcd4;
-        }
-        .services-list li {
-            margin-bottom: 10px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            background: #2c2c2c;
-            border: 1px solid #444;
-            color: white;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #00bcd4;
-            border: none;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Kensfot Techub & Software</h1>
-        <p>Delivering Technology Solutions</p>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html" class="">About Us</a>
-            <a href="services.html" class="">Services</a>
-            <a href="contact.html" class="">Contact Us</a>
-        </nav>
-    </header>
-    <div class="container">
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-laptop-code text-blue-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">Kensoft Techub</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#services" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#pricing" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Pricing</a>
+                    <a href="#about" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
         
-<h2>Welcome to Kensfot Techub & Software</h2>
-<p>We are your trusted partner in delivering high-quality technology solutions. From computer repairs to data recovery, we’ve got you covered with professional, reliable service.</p>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Home</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Services</a>
+                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Pricing</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">About</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Your One-Stop Cyber Cafe & Printing Solution</h1>
+                    <p class="text-xl mb-8">High-speed internet, premium printing services, and a comfortable workspace for all your digital needs.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold shadow-lg transition duration-300">Contact Us</a>
+                        <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-semibold shadow-lg transition duration-300">Our Services</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cyber Cafe" class="rounded-xl shadow-2xl border-8 border-white">
+                        <div class="absolute -bottom-6 -right-6 bg-white text-blue-600 p-4 rounded-lg shadow-xl floating-btn">
+                            <i class="fas fa-clock text-3xl"></i>
+                            <p class="font-bold mt-2">Open 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive digital solutions tailored to meet your needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Internet Services -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="bg-blue-500 p-6">
+                        <i class="fas fa-wifi text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">High-Speed Internet</h3>
+                        <p class="text-gray-600 mb-4">Blazing fast fiber optic internet with unlimited bandwidth for browsing, streaming, and gaming.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>100+ Mbps speeds</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Secure VPN available</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>24/7 access</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Printing Services -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="bg-purple-500 p-6">
+                        <i class="fas fa-print text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Premium Printing</h3>
+                        <p class="text-gray-600 mb-4">High-quality printing services for all your documents, photos, and creative projects.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Color & B/W printing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Large format printing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Same-day service</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Computer Rentals -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="bg-indigo-500 p-6">
+                        <i class="fas fa-laptop text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Computer Rental</h3>
+                        <p class="text-gray-600 mb-4">Powerful computers with premium software for work, design, and entertainment.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Latest hardware</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Professional software</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Hourly/daily rates</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Scanning -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="bg-blue-600 p-6">
+                        <i class="fas fa-scanner text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Scanning Services</h3>
+                        <p class="text-gray-600 mb-4">High-resolution scanning for documents, photos, and artwork with various output formats.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Document scanning</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Photo restoration</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>OCR text recognition</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Design Services -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="bg-purple-600 p-6">
+                        <i class="fas fa-paint-brush text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Design Services</h3>
+                        <p class="text-gray-600 mb-4">Professional design assistance for your business cards, flyers, banners, and more.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Graphic design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Logo creation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Print-ready files</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Other Services -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="bg-indigo-600 p-6">
+                        <i class="fas fa-ellipsis-h text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Additional Services</h3>
+                        <p class="text-gray-600 mb-4">We offer a wide range of other digital services to meet all your needs.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Photocopying</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Laminating</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Document binding</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Pricing</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Affordable rates for top-quality services</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Internet Pricing -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden price-card transition duration-300">
+                    <div class="bg-blue-500 p-6 text-center">
+                        <h3 class="text-xl font-bold text-white">Internet Access</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-900">Ksh1</span>
+                            <span class="text-gray-600">/ min</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-500 mr-2"></i>
+                                <span>High-speed fiber optic</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-500 mr-2"></i>
+                                <span>Unlimited bandwidth</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-500 mr-2"></i>
+                                <span>Secure browsing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-500 mr-2"></i>
+                                <span>Printing credit included</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold w-full transition duration-300">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Printing Pricing -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden price-card transition duration-300 transform scale-105 border-2 border-purple-500">
+                    <div class="bg-purple-500 p-6 text-center">
+                        <h3 class="text-xl font-bold text-white">Printing Services</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-900">Ksh 5</span>
+                            <span class="text-gray-600">/ B/W page</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2"></i>
+                                <span>Color printing: Ksh10/page</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2"></i>
+                                <span>Photo printing available</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2"></i>
+                                <span>Bulk discounts</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2"></i>
+                                <span>Same-day service</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <button class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold w-full transition duration-300">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Computer Rental Pricing -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden price-card transition duration-300">
+                    <div class="bg-indigo-500 p-6 text-center">
+                        <h3 class="text-xl font-bold text-white">Computer Repairs</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-900">Per Service</span>
+                            <span class="text-gray-600">/ Rate</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-indigo-500 mr-2"></i>
+                                <span>Hardware Repair Services</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-indigo-500 mr-2"></i>
+                                <span>Software Installation Services</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-indigo-500 mr-2"></i>
+                                <span>Virus Removal Services</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-indigo-500 mr-2"></i>
+                                <span>Computer Maintainance & Upgrade</span>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold w-full transition duration-300">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-xl shadow-md p-8">
+                <h3 class="text-2xl font-bold text-center mb-6">Additional Services Pricing</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-copy text-blue-500 text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-semibold">Photocopying</h4>
+                            <p class="text-gray-600">Ksh 5 per page (B/W), Ksh10 per page (Color)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-id-card text-purple-500 text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-semibold">Laminating</h4>
+                            <p class="text-gray-600">Ksh 50 per sheet (up to A4 size)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-book text-indigo-500 text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-semibold">Document Binding</h4>
+                            <p class="text-gray-600">Starting from Ksh 50 per document</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-image text-blue-500 text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-semibold">Photo Scanning</h4>
+                            <p class="text-gray-600">Ksh 20 per photo (high resolution)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-purple-500 text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-semibold">Email services</h4>
+                            <p class="text-gray-600">Ksh30 per mail (local), Ksh50 per mail (international)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-barcode text-indigo-500 text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-semibold">Barcode Printing</h4>
+                            <p class="text-gray-600">Starting from Ksh 200 for 100 labels</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src=https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80="Our Team" class="rounded-xl shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Kensoft Techub</h2>
+                    <p class="text-gray-600 mb-6">Founded in 2025, Kensoft Techub has grown from a small internet cafe to the premier digital services provider in our community. Our mission is to provide affordable, reliable, and high-quality digital services to everyone.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Our Values</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-bolt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Speed & Efficiency</h4>
+                                    <p class="text-gray-600">We value your time and deliver services promptly without compromising quality.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-hand-holding-heart text-purple-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Customer Care</h4>
+                                    <p class="text-gray-600">Every customer is important to us, and we go the extra mile to ensure satisfaction.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-chart-line text-indigo-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Continuous Improvement</h4>
+                                    <p class="text-gray-600">We regularly upgrade our equipment and services to stay ahead of technology trends.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Our Facilities</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-wifi text-blue-500 mr-2"></i>
+                                <span>20+ Workstations</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-print text-purple-500 mr-2"></i>
+                                <span>5 High-end Printers</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-coffee text-indigo-500 mr-2"></i>
+                                <span>Refreshment Area</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-parking text-blue-500 mr-2"></i>
+                                <span>Free Parking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Don't just take our word for it - hear from our satisfied customers</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Kensoft Techub saved my business presentation with their lightning-fast printing service when my office printer failed. The quality was exceptional!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <p class="text-gray-500 text-sm">Small Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"As a student, I rely on Kensoft Techub for all my printing needs. Their prices are fair, and the staff is always helpful with formatting issues."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Morris K." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Morris K.</h4>
+                            <p class="text-gray-500 text-sm">University Student</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The internet speeds here are incredible! I often work remotely from Kensoft Techub when my home connection is down. Comfortable chairs too!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Jane M." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Jane M.</h4>
+                            <p class="text-gray-500 text-sm">Freelance Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get in touch for inquiries or to discuss your specific needs</p>
+            </div>
+            
+            <div class="md:flex">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Address</h4>
+                                    <p class="text-gray-600">Kibugua Market, Society Building, Room No. 23</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-purple-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Phone</h4>
+                                    <p class="text-gray-600">(254) 711-169134</p>
+                                    <p class="text-gray-600">24/7 Support: (254) 711-169134</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-indigo-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Email</h4>
+                                    <p class="text-gray-600">kensofttechub@gmail.com</p>
+                                    <p class="text-gray-600">kensofttechub@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 10:00 PM</p>
+                                    <p class="text-gray-600">Saturday - Sunday: 9:00 AM - 11:00 PM</p>
+                                    <p class="text-blue-500 font-medium">24/7 printing kiosk available</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-gray-900 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-gray-800 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="John Doe">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your@email.com">
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="(123) 456-7890">
+                            </div>
+                            <div class="mb-6">
+                                <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested In</label>
+                                <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Select a service</option>
+                                    <option value="internet">Internet Access</option>
+                                    <option value="printing">Printing Services</option>
+                                    <option value="computer">Computer Rental</option>
+                                    <option value="scanning">Scanning Services</option>
+                                    <option value="design">Design Services</option>
+                                    <option value="other">Other Services</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your message..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="rounded-xl overflow-hidden shadow-xl">
+                <iframe src="https://satellites.pro/Google_plan/Kibugu_map.Kenya#-0.368946,37.620449,18" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
     </div>
-    <footer>
-        &copy; 2025 Kensfot Techub & Software. All rights reserved.
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kensoft Techub</h3>
+                    <p class="text-gray-400">Your trusted partner for all digital needs. High-quality services at affordable prices.</p>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white">Pricing</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Internet Access</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Printing Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Computer Rental</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Scanning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Design Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest offers and updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <p class="text-gray-400 text-sm mt-2">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Kensoft Techub. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">FAQ</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <div class="flex flex-col space-y-3">
+            <a href="tel:+254708230117" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/+254708230117" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-full shadow-lg transition duration-300">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+$0
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission (example)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        }
+    </script>
 </body>
 </html>
